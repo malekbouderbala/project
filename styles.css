@@ -1,0 +1,68 @@
+  /* alternate nav fallback css */
+  body.altnav--fallback phn-header ~ .b-page-wrapper .m-00-header,
+  body.altnav--fallback phn-header ~ .b-page-wrapper .m-100-header{
+  display: none !important;
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "pag-iconfont";
+    src: url("/fonts/pag-iconfont/pag-iconfont.eot");
+    src: url("/fonts/pag-iconfont/pag-iconfont.eot?#iefix") format("embedded-opentype"), url("/fonts/pag-iconfont/pag-iconfont.woff") format("woff"), url("/fonts/pag-iconfont/pag-iconfont.ttf") format("truetype"), url("/fonts/pag-iconfont/pag-iconfont.svg#pag-iconfont") format("svg");
+    }
+    phn-header{z-index:500;position:relative;display:block}
+    /* override overflow-x:hidden pcom rule for sitecore modules that rely on overflow-x:visible (e.g. lax animation modules)  */
+.b-page-wrapper:not(header) div.contentproxy_module {
+    overflow-x: visible !important;
+}
+body > main.b-page-wrapper:has(.contentproxy_module) {
+    max-width: none;
+}
+/*
+body > main > .contentproxy_module .plyr__video-embed {
+   height: auto;
+   padding-bottom: initial;
+}
+*/
+.m-00-header.m-00-main-navigation-available .m-00-header-lined-crest:before {
+    border-bottom: 0px solid black !important;
+  }
+
+.m-100-wrapper .m-00-crest-svg,
+.m-00-header .m-00-crest-svg {
+  width: 160px;
+  height: 62px;
+  background-size: 160px auto;
+  background-position: center;
+}
+.m-100-wrapper .m-00-crest-svg,
+.m-00-header .m-00-crest-svg,
+.m-100-header .m-101-crest-svg {
+  background-image: url('/filestore/image/multimedia/none/wordmark/svg/9bee0427-35f0-11ea-80c6-005056bbdc38/porsche-svg.svg') !important;
+}
+
+@media only screen and (min-width: 63.9375em) {
+  .m-100-wrapper .m-00-crest-svg,
+  .m-00-header .m-00-crest-svg {
+    width: 240px;
+    height: 75px;
+    background-size: auto auto;
+  }
+}
+
+.m-100-wrapper .m-00-crest-wrapper-svg {
+  box-shadow: none;
+  padding: 0;
+  height: inherit;
+  margin-left: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.m-100-wrapper .m-00-crest-svg {
+  transform: none;
+}
+.m-00-crest-svg,
+        .m-101-crest-svg {
+          background-image: url('https://files.porsche.com/filestore/image/multimedia/none/875d5e3d-6763-47fe-bc52-809142d53274/svg/9bee0427-35f0-11ea-80c6-005056bbdc38/porsche-svg.svg') !important;
+        }
